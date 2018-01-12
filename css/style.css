@@ -1,0 +1,145 @@
+.clock {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.clock .days, .clock .hours, .clock .minutes, .clock .seconds, .clock .weeks {
+	display: inline-flex;
+}
+
+.countdown-title {
+	text-align: center;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.weeks, .days, .hours, .minutes, .seconds {
+	position: relative;
+	height: 120px;
+	perspective: 200px;
+
+}
+.front {
+	height: 120px;
+	width: 160px;
+
+}
+.front .first-row-top {
+	background: url('https://cdn.pixabay.com/photo/2012/04/13/12/46/number-32258_960_720.png') no-repeat;
+    width: 80px;
+    height: 60px;
+	background-position: 0 -180px;
+}
+
+.front .first-row-bottom {
+	background: url('https://cdn.pixabay.com/photo/2012/04/13/12/46/number-32258_960_720.png') no-repeat;
+    width: 80px;
+    height: 60px;
+	background-position: 0 -240px;
+	position: absolute;
+	bottom: 0;
+}
+
+.front .second-row-top {
+	background: url('https://cdn.pixabay.com/photo/2012/04/13/12/46/number-32258_960_720.png') no-repeat;
+    width: 80px;
+    height: 60px;
+	background-position: 0 -180px;
+	position: absolute;
+	top: 0;
+	right: 0;
+    z-index: 1000;
+}
+
+.front .second-row-bottom {
+	background: url('https://cdn.pixabay.com/photo/2012/04/13/12/46/number-32258_960_720.png') no-repeat;
+    width: 80px;
+    height: 60px;
+	background-position: 0 -240px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+    z-index: 1000;
+}
+
+.back .first-row-top {
+	background: url('https://cdn.pixabay.com/photo/2012/04/13/12/46/number-32258_960_720.png') no-repeat;
+    width: 80px;
+    height: 60px;
+	background-position: 0 -180px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.back .first-row-bottom {
+	background: url('https://cdn.pixabay.com/photo/2012/04/13/12/46/number-32258_960_720.png') no-repeat;
+    width: 80px;
+    height: 60px;
+	background-position: 0 -240px;
+	position: absolute;
+	bottom: 0;
+	left:0;
+}
+
+.back .second-row-top {
+	background: url('https://cdn.pixabay.com/photo/2012/04/13/12/46/number-32258_960_720.png') no-repeat;
+    width: 80px;
+    height: 60px;
+	background-position: 0 -180px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.back .second-row-bottom {
+	background: url('https://cdn.pixabay.com/photo/2012/04/13/12/46/number-32258_960_720.png') no-repeat;
+    width: 80px;
+    height: 60px;
+	background-position: 0 -240px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+
+
+.animation-top {
+	animation: flipup  1s linear  infinite;
+}
+
+.animation-bottom {
+	animation: flipdown 1s linear  infinite;
+	transform-origin: 100% 0;
+
+}
+
+@keyframes flipdown {
+    0% {
+        -webkit-transform: rotate3d(-1, 0, 0, -100deg);
+        z-index: 1001;
+
+    }
+    30% {
+        -webkit-transform: rotate3d(0, 0, 0, -100deg);
+        z-index: 1001;
+
+    } 
+    100% {
+        -webkit-transform: rotate3d(0, 0, 0, -100deg);
+        z-index: 1001;
+    }    
+}
+
+@keyframes flipup {
+
+    0% {
+    	opacity: 1;
+    } 
+    90% {
+    	opacity: 1;
+    }
+    100% {
+    	opacity: 0.5;
+    }
+}
