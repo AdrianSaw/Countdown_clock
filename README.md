@@ -1,5 +1,5 @@
-# Countdown_clock
-Animated time countdown
+# Countdown clock
+Animated time countdown clock
 
 Usage: 
 
@@ -8,9 +8,8 @@ Usage:
 3. Add init to your .js file:
 <br>
 <code>let finishDate = new Date(Date.parse(new Date()) + 24.001 * 60 * 60 * 1000);</code>
-<br>
 <code>initializeClock(finishDate, 1000);</code>
-
+<br>
 4. Copy HTML from demo.html
 5. You can remove any div with time range without risk of getting error
 6. Options:
