@@ -13,14 +13,11 @@ Usage:
 6. Options:<br>
 <code>stopCountdown = () => {
     clearInterval(clockIntervala);
-};</code>
-<br>
+};</code><br>
 <code>startCountdown = (finishDate) => {
     initializeClock(finishDate);
-};</code>
-<br>
-<code>onTimeChange = (t) => {};</code>
-<br>
+};</code><br>
+<code>onTimeChange = (t) => {};</code><br>
 <code>coundtdownFinished = () => {};</code>
 
 ### TODO: 
